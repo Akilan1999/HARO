@@ -49,7 +49,7 @@ h3{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    /*overflow: hidden;
+    /*overflow: hidden;*/
     /*position: fixed;*/
     top: 0;
     width: 100%;
@@ -72,10 +72,43 @@ h3{
     text-decoration: none;
 }
 
-/* hamburger menu code ----------*/
+.nav .hamburger {
+    display: none;
+  }
+  
+  /* need help here*/
+@media screen and (max-width: 600px) {
+    .nav a:not(.hamburger) {display: none;}
+    .nav a.hamburger {
+        float: right;
+      display: block;
+      font-size: 30px;
+    }}
+    @media screen and (max-width: 600px) {
+    .nav.responsive {
+        position: relative;
+        z-index: 300;
+    }
+    .nav.responsive li .hamburger {
+      position: absolute;
+      display:inline-block;
+      right: 0;
+      top: 0;
+    }
+    .nav.responsive a{
+        display: block;
+        color:black;
+        text-align: left;
+    }
+    .nav.responsive li {
+      float: none;
+      display: block;
+    }
+  }
+/* -----------------------------------------*/
+
 .nav li a:hover:not(.active) {
     color:white;
-    background: black;
 }
 
 .nav .active {
@@ -85,12 +118,10 @@ h3{
 
 
 .hamburger{
-    display: none;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    position: fixed;
     top: 0;
     width: 100%;
     z-index:300;
@@ -101,7 +132,7 @@ h3{
 .hamburger li{
     margin-top: 20px;
     margin-bottom: 20px;
-    float: left;
+    float: right;
    position: relative;
     left: 40%;
 }
@@ -113,53 +144,7 @@ h3{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 30px;
-}
-
-@media only screen and (max-width: 768px) {
-  .nav li{
-     float:right;
-  }
- .hamburger {
-    display: block;
-}
-  .nav li a{
-    display: none;
-  }
- 
- 
-}
-
-/*----------hamburger model------------------*/
-#nav_modal {
-    display: none;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 30px;
-    z-index: 500;
-}
-
-#nav_modal .active {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 30px;
-    z-index: 500;
-}
-#nav_modal ul {
-    list-style-type: none;
-}
-#nav_modal ul a{
-    color: black;
-    text-decoration:none;
-}
-#nav_modal .close{
-    font-size: 40px;
-    float: right;
+    
 }
 
 
